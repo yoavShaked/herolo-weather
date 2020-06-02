@@ -14,7 +14,7 @@ import { StyledAutocomplete, ToastContainer } from "./styled-components";
 const mapOption = (option) => get("cityName", option);
 
 const allowdInputValue = (value) => {
-  return /^[a-zA-Z\s]+$/.test(value);
+  return value ? /^[a-zA-Z\s]+$/.test(value) : true;
 };
 
 const SerachInput = ({
