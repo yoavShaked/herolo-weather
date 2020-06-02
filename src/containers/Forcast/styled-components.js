@@ -9,6 +9,12 @@ export const Container = styled(Flexbox)`
 
          box-shadow: -3px 6px 41px 8px rgba(28, 30, 30, 0.49);
          background-color: white;
+
+         .MuiAlert-standardError {
+           height: 80px;
+           width: 100%;
+           margin-top: 64px;
+         }
          .MuiTypography-body1 {
            margin: 0 auto;
            color: #0c0505;

@@ -46,32 +46,36 @@ const Forcast = ({
     "MMMM Do YYYY, h:mm:ss a"
   )}`;
 
-  return (
-    <Container flexDirection="column">
-      <Tooltip title={cityName}>
-        <Typography className="title">{cityName}</Typography>
-      </Tooltip>
-      <Tooltip title={currentFullTime}>
-        <Typography className="time">{currentFullTime}</Typography>
-      </Tooltip>
-      <Tooltip title={description}>
-        <Typography className="description">{description}</Typography>
-      </Tooltip>
-      <ActionsContainer>
-        <SwitchLabels
-          checkedLabel={DAY_TIME.DAY}
-          uncheckedLabel={DAY_TIME.NIGHT}
-          afterChange={setDayTime}
-        />
-        <FavoriteAction />
-      </ActionsContainer>
-      {errorMessage ? (
+  const render = () => {
+    return errorMessage ? (
+      <Container height="225px">
         <Toast context={errorMessage} />
-      ) : (
+      </Container>
+    ) : (
+      <Container flexDirection="column">
+        <Tooltip title={cityName}>
+          <Typography className="title">{cityName}</Typography>
+        </Tooltip>
+        <Tooltip title={currentFullTime}>
+          <Typography className="time">{currentFullTime}</Typography>
+        </Tooltip>
+        <Tooltip title={description}>
+          <Typography className="description">{description}</Typography>
+        </Tooltip>
+        <ActionsContainer>
+          <SwitchLabels
+            checkedLabel={DAY_TIME.DAY}
+            uncheckedLabel={DAY_TIME.NIGHT}
+            afterChange={setDayTime}
+          />
+          <FavoriteAction />
+        </ActionsContainer>
         <WeeklyForcast dayTime={dayTime} />
-      )}
-    </Container>
-  );
+      </Container>
+    );
+  }
+
+  return render();
 };
 
 const mapStateToProps = (state) => ({
