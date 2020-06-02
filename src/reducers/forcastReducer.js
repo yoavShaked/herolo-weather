@@ -10,8 +10,8 @@ const initialState = {
   weatherForcast: [],
   cityName: "",
   description: "",
-  errorMessage: '',
-  fetchForcast: false
+  errorMessage: "",
+  fetchForcast: false,
 };
 
 const onDailyForcast = (payload, meta) =>
@@ -58,12 +58,13 @@ export default (state = initialState, action) => {
       const newState = onDailyForcast(payload, meta)(state);
       return newState;
     }
-    case types.GET_DAILY_FORCAST.ERROR: {
-     return flow([
-       set("errorMessage", action.errorMessage),
-       set("isLoading", false),
-       set("fetchForcast", false),
-     ])(state);
+    case types.GET_DAILY_FORCAST.ERROR:
+    case types.SET_INITIAL_FORCAST.ERROR: {
+      return flow([
+        set("errorMessage", action.errorMessage),
+        set("isLoading", false),
+        set("fetchForcast", false),
+      ])(state);
     }
     case types.SET_DEGREE_UNIT_TYPE: {
       const unitType = get("unitType", action.payload);
