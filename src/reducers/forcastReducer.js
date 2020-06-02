@@ -85,7 +85,7 @@ export default (state = initialState, action) => {
           weatherItem
         );
       const weatherForcast = map(mapTemperature, state.weatherForcast);
-      console.log(weatherForcast);
+
       return set("weatherForcast", weatherForcast, state);
     }
     default: {
