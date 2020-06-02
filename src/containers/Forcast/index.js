@@ -70,7 +70,6 @@ const Forcast = ({
       ) : (
         <WeeklyForcast dayTime={dayTime} />
       )}
-      <WeeklyForcast dayTime={dayTime} />
     </Container>
   );
 };
