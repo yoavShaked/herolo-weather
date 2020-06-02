@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/herolo-weather/static/css/main.59414811.chunk.css",
-    "main.js": "/herolo-weather/static/js/main.c9ea48c7.chunk.js",
-    "main.js.map": "/herolo-weather/static/js/main.c9ea48c7.chunk.js.map",
+    "main.js": "/herolo-weather/static/js/main.1e49fd18.chunk.js",
+    "main.js.map": "/herolo-weather/static/js/main.1e49fd18.chunk.js.map",
     "runtime-main.js": "/herolo-weather/static/js/runtime-main.c11780cc.js",
     "runtime-main.js.map": "/herolo-weather/static/js/runtime-main.c11780cc.js.map",
     "static/js/2.afd993f7.chunk.js": "/herolo-weather/static/js/2.afd993f7.chunk.js",
     "static/js/2.afd993f7.chunk.js.map": "/herolo-weather/static/js/2.afd993f7.chunk.js.map",
     "index.html": "/herolo-weather/index.html",
-    "precache-manifest.b5659e51942818ab8f0158394311eb86.js": "/herolo-weather/precache-manifest.b5659e51942818ab8f0158394311eb86.js",
+    "precache-manifest.b08ee6ed5c6951a7a31e6a80859a2857.js": "/herolo-weather/precache-manifest.b08ee6ed5c6951a7a31e6a80859a2857.js",
     "service-worker.js": "/herolo-weather/service-worker.js",
     "static/css/main.59414811.chunk.css.map": "/herolo-weather/static/css/main.59414811.chunk.css.map",
     "static/js/2.afd993f7.chunk.js.LICENSE.txt": "/herolo-weather/static/js/2.afd993f7.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c11780cc.js",
     "static/js/2.afd993f7.chunk.js",
     "static/css/main.59414811.chunk.css",
-    "static/js/main.c9ea48c7.chunk.js"
+    "static/js/main.1e49fd18.chunk.js"
   ]
 }
