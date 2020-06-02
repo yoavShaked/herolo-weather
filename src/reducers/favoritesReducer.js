@@ -36,7 +36,7 @@ export default (state = initialState, action) => {
       const { payload, meta } = action;
       const cityName = get("cityName", meta);
 
-      if(typeof cityName === 'string') {
+      if (cityName && typeof cityName === "string") {
         return set(
           ["favorites", cityName],
           {
@@ -55,7 +55,8 @@ export default (state = initialState, action) => {
     case types.REMOVE_FROM_FAVORITES: {
       const { cityName } = action.payload;
       const { favorites } = state;
-      delete favorites[cityName];
+
+      if (cityName && typeof cityName === "string") delete favorites[cityName];
 
       const newState = set("favorites", { ...favorites }, state);
       return newState;
