@@ -49,7 +49,9 @@ const FavoriteItem = ({ weather, unitType }) => {
 
   return (
     <WeatherItemContainer flexDirection="column">
+      <Tooltip title={cityName}>
       <Typography className="title">{cityName}</Typography>
+      </Tooltip>
       <WeatherItemRow>
         <Tooltip title={title}>
           <Typography>{title}</Typography>
