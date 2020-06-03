@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a05cca70e2acb061d4790f3fbe5dc0d6",
+    "revision": "f2359e8c3ce25027d8d11b052d2fc065",
     "url": "/herolo-weather/index.html"
   },
   {
-    "revision": "8a2b6e8bc35dac507860",
+    "revision": "8b7616e4f1a18ca7036b",
     "url": "/herolo-weather/static/css/main.59414811.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/herolo-weather/static/js/2.b5a67c36.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8a2b6e8bc35dac507860",
-    "url": "/herolo-weather/static/js/main.399e2ec7.chunk.js"
+    "revision": "8b7616e4f1a18ca7036b",
+    "url": "/herolo-weather/static/js/main.7407f13a.chunk.js"
   },
   {
     "revision": "8c480d657b71dcbdb6d3",
