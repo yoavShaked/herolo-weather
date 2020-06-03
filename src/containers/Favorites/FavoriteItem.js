@@ -3,6 +3,7 @@ import {get} from 'lodash/fp';
 
 import { Typography, Tooltip } from "@material-ui/core";
 import { UNIT_TYPE } from "../../constants/titles";
+import icons from '../../icons';
 import Icon from "../../components/Icon";
 
 import { WeatherItemContainer, WeatherItemRow } from "./styled-components";
@@ -25,7 +26,7 @@ const getWeatherData = (weatherObject, unitType = UNIT_TYPE.CELSIUS) => {
 
   return {
     cityName: get("cityName", weatherObject),
-    iconId: get("iconId", weatherObject),
+    iconSrc: get(get("iconId", weatherObject), icons),
     title: get("weatherTitle", weatherObject),
     windSpeed: get("windSpeed", weatherObject),
     windDircection: get("windDirction", weatherObject),
@@ -39,7 +40,7 @@ const FavoriteItem = ({ weather, unitType }) => {
   const {
     cityName,
     visibilty,
-    iconId,
+    iconSrc,
     title,
     windDircection,
     windSpeed,
@@ -56,7 +57,7 @@ const FavoriteItem = ({ weather, unitType }) => {
         <Tooltip title={title}>
           <Typography>{title}</Typography>
         </Tooltip>
-        <Icon img={iconId} />
+        <Icon src={iconSrc} />
       </WeatherItemRow>
       <WeatherItemRow>
           <Typography>Feels like</Typography>
@@ -71,7 +72,7 @@ const FavoriteItem = ({ weather, unitType }) => {
         </Tooltip>
       </WeatherItemRow>
       <WeatherItemRow className="wind-row">
-        <Icon width="57px" height="58px" img="wind" />
+        <Icon width="57px" height="58px" src={icons["wind"] }/>
         <Tooltip title={`Wind Speed ${windSpeed}`}>
           <Typography>{windSpeed}</Typography>
         </Tooltip>

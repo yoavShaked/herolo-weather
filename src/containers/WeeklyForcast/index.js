@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { get } from "lodash/fp";
 import { Typography, Tooltip } from "@material-ui/core";
-
+import icons from '../../icons';
 import Icon from "../../components/Icon";
 import { WeatherItemContainer, Container } from "./styled-components";
 
@@ -13,13 +13,14 @@ const WeeklyForcast = ({ weatherForcast, dayTime }) => {
     const maxTemperature = get(["temperature", "max"], weather);
     const description = get([dayTime, "IconPhrase"], weather);
     const iconId = get([dayTime, "Icon"], weather);
+    const iconSrc = get(iconId, icons);
 
     return (
       <WeatherItemContainer
         flexDirection="column"
         key={`${index}-${minTemperature}-${maxTemperature}`}
       >
-        <Icon img={iconId} />
+        <Icon src={iconSrc} alt="" />
         <Tooltip title={description}>
           <Typography className="description">{description}</Typography>
         </Tooltip>
