@@ -28,7 +28,7 @@ export default function Nevigationbar() {
   const dropDownMenu = (
     <div className="dropdown">
       <MenuIcon />
-      <div class="dropdown-content">
+      <div className="dropdown-content">
         <Link to="/">
           <Typography>{TABS.HOME}</Typography>
         </Link>
