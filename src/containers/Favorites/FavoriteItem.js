@@ -57,14 +57,14 @@ const FavoriteItem = ({ weather, unitType }) => {
         <Icon img={iconId} />
       </WeatherItemRow>
       <WeatherItemRow>
-        <Tooltip title={`Feels like ${currentTemperature}`}>
           <Typography>Feels like</Typography>
+        <Tooltip title={`Feels like ${currentTemperature}`}>
           <Typography>{currentTemperature}</Typography>
         </Tooltip>
       </WeatherItemRow>
       <WeatherItemRow>
-        <Tooltip title={`Temperatures temperatureSummary`}>
           <Typography>Temperatures</Typography>
+        <Tooltip title={`Temperatures temperatureSummary`}>
           <Typography>{temperatureSummary}</Typography>
         </Tooltip>
       </WeatherItemRow>
@@ -78,8 +78,8 @@ const FavoriteItem = ({ weather, unitType }) => {
         </Tooltip>
       </WeatherItemRow>
       <WeatherItemRow>
-        <Tooltip title={`Visibily ${visibilty}`}>
           <Typography>Visibily</Typography>
+        <Tooltip title={`Visibily ${visibilty}`}>
           <Typography>{visibilty}</Typography>
         </Tooltip>
       </WeatherItemRow>
