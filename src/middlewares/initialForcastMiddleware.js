@@ -13,7 +13,7 @@ const initialForcast = (store) => (next) => (action) => {
   store.dispatch(
     getDailyForcast(
       { cityId, metric: get("metric", meta) },
-      get("meta", action)
+      meta
     )
   );
 };
