@@ -64,7 +64,7 @@ const FavoriteItem = ({ weather, unitType }) => {
       </WeatherItemRow>
       <WeatherItemRow>
           <Typography>Temperatures</Typography>
-        <Tooltip title={`Temperatures temperatureSummary`}>
+        <Tooltip title={`Temperatures ${temperatureSummary}`}>
           <Typography>{temperatureSummary}</Typography>
         </Tooltip>
       </WeatherItemRow>
