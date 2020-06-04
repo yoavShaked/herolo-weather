@@ -32,6 +32,7 @@ export const Container = styled(Flexbox)`
            width: 500px;
            overflow: hidden;
            text-overflow: ellipsis;
+           color: black;
          }
          @media screen and (max-width: 1024px) {
            width: 800px;
@@ -41,18 +42,21 @@ export const Container = styled(Flexbox)`
            width: 600px;
            margin: 0 auto;
            overflow-y: auto;
+             scroll-margin-right: 10px;
            &::-webkit-scrollbar {
-             width: 15px;
+             width: 8px;
              border-radius: 5px;
            }
 
            &::-webkit-scrollbar-track {
              box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+             border-radius: 5px;
            }
 
            &::-webkit-scrollbar-thumb {
              background-color: darkgrey;
              outline: 1px solid slategrey;
+             border-radius: 5px;
            }
          }
          @media screen and (max-width: 646px) {

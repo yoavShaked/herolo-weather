@@ -59,9 +59,11 @@ const Forcast = ({
         <Tooltip title={currentFullTime}>
           <Typography className="time">{currentFullTime}</Typography>
         </Tooltip>
-        <Tooltip title={description}>
-          <Typography className="description">{description}</Typography>
-        </Tooltip>
+        {description && (
+          <Tooltip title={description}>
+            <Typography className="description">{description}</Typography>
+          </Tooltip>
+        )}
         <ActionsContainer>
           <SwitchLabels
             checkedLabel={DAY_TIME.DAY}

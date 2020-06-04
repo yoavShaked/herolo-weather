@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 
 import { get } from "lodash/fp";
+import { Typography, Tooltip } from "@material-ui/core";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 import * as favoritesActions from "../../actions/favorites";
 
-import ToggledComponent from "../../components/ToggledComponent";
+import { FavoriteContainer } from "./styled-components";
 
 const FavoriteAction = ({
   cityId,
@@ -16,8 +17,11 @@ const FavoriteAction = ({
   removeFromFavorites,
   isFavorite,
 }) => {
-  const onClick = (toggledValue) => {
-    if (toggledValue) {
+  const [toggle, setToggle] = useState(isFavorite);
+  const SaveIcon = !toggle ? FavoriteBorderIcon : FavoriteIcon;
+
+  const onClick = () => {
+    if (!toggle) {
       addToFavorites({
         cityName,
         cityId,
@@ -25,15 +29,18 @@ const FavoriteAction = ({
     } else {
       removeFromFavorites(cityName);
     }
+    setToggle(!toggle);
   };
 
+  const title = isFavorite ? "Saved to Favorites" : "Add to Favorites";
+
   return (
-    <ToggledComponent
-      initialValue={isFavorite}
-      onClick={onClick}
-      OnComponent={FavoriteIcon}
-      OffComponent={FavoriteBorderIcon}
-    />
+    <Tooltip title={title}>
+      <FavoriteContainer onClick={onClick}>
+        <Typography className="favorite-title">{title}</Typography>
+        <SaveIcon />
+      </FavoriteContainer>
+    </Tooltip>
   );
 };
 
