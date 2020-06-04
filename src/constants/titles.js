@@ -3,7 +3,7 @@ export const TABS = {
     FAVORITES: 'Favorites'
 };
 
-export const APP_TITLE = "Herolo Weather";
+export const APP_TITLE = "Weather";
 
 export const DAY_TIME = {
     DAY: 'Day',
