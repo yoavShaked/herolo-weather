@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/herolo-weather/precache-manifest.3f9ec2136eeb06751260fbdf8a86fb60.js"
+  "/herolo-weather/precache-manifest.8374268319772d27944eea63a230f2db.js"
 );
 
 self.addEventListener('message', (event) => {
