@@ -17,7 +17,8 @@ export const Container = styled(Flexbox)`
          }
          .MuiTypography-body1 {
            margin: 0 auto;
-           color: #0c0505;
+          color: #0c0505;
+          font-family: roboto;
          }
          .title {
            font-size: larger;

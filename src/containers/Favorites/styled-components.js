@@ -28,7 +28,7 @@ export const WeatherItemContainer = styled(Flexbox)`
          @media screen and (max-width: 800px) {
            width: 250px;
          }
-         @media screen and (max-width: 528px){
+         @media screen and (max-width: 528px) {
            margin: 20px auto 0 auto;
          }
        `;
@@ -42,6 +42,9 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   margin-bottom: 30px;
+  .MuiTypography-body1 {
+    font-family: roboto;
+  }
   @media screen and (max-width: 1240px) {
     grid-template-columns: 50% 50%;
   }
