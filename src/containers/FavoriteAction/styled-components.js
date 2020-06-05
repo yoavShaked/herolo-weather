@@ -15,11 +15,13 @@ export const FavoriteContainer = styled(Flexbox)`
          .MuiSvgIcon-root {
            color: black;
            margin-right: 7px;
-         }
+        }
          .favorite-title {
            &.MuiTypography-body1 {
              color: black;
              margin: 5px 9px;
+             font-family: roboto;
+             font-weight: 500;
            }
          }
 

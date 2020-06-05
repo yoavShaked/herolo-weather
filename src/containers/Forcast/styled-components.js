@@ -17,8 +17,9 @@ export const Container = styled(Flexbox)`
          }
          .MuiTypography-body1 {
            margin: 0 auto;
-          color: #0c0505;
-          font-family: roboto;
+           color: #0c0505;
+           font-family: roboto;
+           font-weight: 500;
          }
          .title {
            font-size: larger;
@@ -43,7 +44,7 @@ export const Container = styled(Flexbox)`
            width: 600px;
            margin: 0 auto;
            overflow-y: auto;
-             scroll-margin-right: 10px;
+           scroll-margin-right: 10px;
            &::-webkit-scrollbar {
              width: 8px;
              border-radius: 5px;

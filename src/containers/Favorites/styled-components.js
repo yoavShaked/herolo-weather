@@ -39,16 +39,17 @@ export const WeatherItemRow = styled(Flexbox)`
 `;
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
-  margin-bottom: 30px;
-  .MuiTypography-body1 {
-    font-family: roboto;
-  }
-  @media screen and (max-width: 1240px) {
-    grid-template-columns: 50% 50%;
-  }
-  @media screen and (max-width: 528px) {
-    grid-template-columns: 100%;
-  }
-`;
+         display: grid;
+         grid-template-columns: 33.33% 33.33% 33.33%;
+         margin-bottom: 30px;
+         .MuiTypography-body1 {
+           font-family: roboto;
+           font-weight: 500;
+         }
+         @media screen and (max-width: 1240px) {
+           grid-template-columns: 50% 50%;
+         }
+         @media screen and (max-width: 528px) {
+           grid-template-columns: 100%;
+         }
+       `;
